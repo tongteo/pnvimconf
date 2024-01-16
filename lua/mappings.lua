@@ -29,3 +29,5 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>")
 vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<cr>")
 --close current buffer
 vim.keymap.set("n", "<leader>x", ":bdelete<cr>")
+--quick save
+vim.keymap.set("n", "<leader>w", ":w<cr>")
