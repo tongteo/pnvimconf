@@ -31,4 +31,4 @@ vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<cr>")
 vim.keymap.set("n", "<leader>x", ":bdelete<cr>")
 --quick save and quit 
 vim.keymap.set("n", "<leader>w", ":w<cr>")
-vim.keymap.set("n", "<leader>w", ":wq<cr>")
+vim.keymap.set("n", "<leader>q", ":wq<cr>")
