@@ -22,6 +22,12 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.clipboard = "unnamedplus"
 
+-- Set color scheme if available
+local ok, _ = pcall(vim.cmd, "colorscheme catppuccin")
+if not ok then
+  vim.notify("Color scheme 'catppuccin' not found!", vim.log.levels.ERROR)
+end
+
 -- Bufferline setup
 require("bufferline").setup{}
 
