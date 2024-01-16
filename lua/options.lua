@@ -1,38 +1,49 @@
+-- Short reference to vim.opt
 local opt = vim.opt
---leader key
+
+-- Leader key configuration
 vim.g.mapleader = " "
 
--- disable netrw at the very start of your init.lua
+-- Disable netrw at the very start
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
+-- Enable termguicolors for better color support
+opt.termguicolors = true
 
-opt.number=true
-opt.relativenumber=true
-opt.cursorline=true
-opt.expandtab=true
-opt.smartindent=true
-opt.tabstop=2
-opt.shiftwidth=2
-opt.softtabstop=2
-opt.clipboard="unnamedplus"
+-- Editor behavior settings
+opt.number = true
+opt.relativenumber = true
+opt.cursorline = true
+opt.expandtab = true
+opt.smartindent = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
+opt.clipboard = "unnamedplus"
 
+-- Bufferline setup
 require("bufferline").setup{}
 
---DAP
+-- DAP (Debug Adapter Protocol) Configuration
 local dap = require("dap")
 dap.adapters.gdb = {
   type = "executable",
   command = "gdb",
-  args = { "-i", "dap" }
+  args = {"-i", "dap"}
 }
-dap.configurations.cpp = {                        {                                           name = "Launch",
-    type = "gdb",                                   request = "launch",                             program = function()
+
+dap.configurations.cpp = {
+  {
+    name = "Launch",
+    type = "gdb",
+    request = "launch",
+    program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end,                                            cwd = "${workspaceFolder}",
-  },
+    end,
+    cwd = "${workspaceFolder}"
+  }
 }
---DAP UI
+
+-- DAP UI Setup
 require("dapui").setup()
