@@ -30,4 +30,6 @@ end
 
 -- Bufferline setup
 require("bufferline").setup{}
+-- Hop setup
+require("hop").setup()
 
