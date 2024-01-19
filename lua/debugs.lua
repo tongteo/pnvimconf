@@ -46,3 +46,12 @@ dap.configurations.cpp = {
     stopOnEntry = false,
   },
 }
+
+
+--keymap dap-ui
+vim.keymap.set("n", "gu", ":lua require'dapui'.toggle()<cr>")
+--DAP keymap
+vim.keymap.set("n", "gb", ":lua require'dap'.toggle_breakpoint()<cr>")
+vim.keymap.set("n", "gc", ":lua require'dap'.continue()<cr>")
+vim.keymap.set("n", "gi", ":lua require'dap'.step_into()<cr>")
+vim.keymap.set("n", "go", ":lua require'dap'.step_over()<cr>")
