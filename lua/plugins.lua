@@ -1,15 +1,10 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  use({
+  use{
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
-})
+}
 -- using packer.nvim
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -30,7 +25,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- You can alias plugin names
-  use 'Exafunction/codeium.vim'
+ -- use 'Exafunction/codeium.vim'
   use {
   'phaazon/hop.nvim',
   branch = 'v2', -- optional but strongly recommended

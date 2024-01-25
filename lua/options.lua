@@ -33,3 +33,7 @@ require("bufferline").setup{}
 -- Hop setup
 require("hop").setup()
 
+require("nvim-surround").setup()
+
+
+
