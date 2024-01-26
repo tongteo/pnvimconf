@@ -1,6 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  use {'numToStr/Comment.nvim'}
   use {"windwp/nvim-autopairs"}
   use{
     "kylechui/nvim-surround",
