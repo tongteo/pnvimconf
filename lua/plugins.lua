@@ -27,7 +27,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- You can alias plugin names
-  use 'Exafunction/codeium.vim'
+  use {
+		"Exafunction/codeium.vim",
+		commit = "a1c3d6b369a18514d656dac149de807becacbdf7",
+	}
   use {
   'phaazon/hop.nvim',
   branch = 'v2', -- optional but strongly recommended
