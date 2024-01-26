@@ -3,7 +3,7 @@ vim.keymap.set("n", "f", "<cmd>HopChar1<cr>")
 --"jk" back to normal mode  
 vim.keymap.set("i", "jk", "<esc>")
 -- tab to next buffer
-vim.keymap.set("n", "<tab>", ":bnext<cr>")
+vim.keymap.set("n", "<tab>", ":bnext<cr>",{ silent = true })
 -- empty setup using defaults
 --require("nvim-tree").setup()
 
@@ -22,15 +22,16 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
---Nvimtree toggle
-vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<cr>")
+--Nvimtree toggle silent
+vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<cr>", { silent = true })
+
 
 --Nvimtree focus
-vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<cr>")
+vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<cr>", { silent = true })
 --close current buffer
-vim.keymap.set("n", "<leader>x", ":bdelete<cr>")
+vim.keymap.set("n", "<leader>x", ":bdelete<cr>", {silent = true })
 --quick save and quit 
-vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>w", ":w<cr>",{ silent = true })
 vim.keymap.set("n", "<leader>q", ":wq<cr>")
 
 --telescope
