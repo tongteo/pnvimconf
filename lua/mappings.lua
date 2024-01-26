@@ -41,4 +41,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-
+--floatterm
+vim.keymap.set("n", "<leader>t", ":FloatermToggle<cr>", { silent = true })
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>:FloatermToggle<cr>", { silent = true })

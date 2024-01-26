@@ -1,6 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  use {'voldikss/vim-floaterm'}
   use {'numToStr/Comment.nvim'}
   use {"windwp/nvim-autopairs"}
   use{
