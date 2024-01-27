@@ -5,8 +5,8 @@ vim.keymap.set("i", "jk", "<esc>")
 -- tab to next buffer
 vim.keymap.set("n", "<tab>", ":bnext<cr>",{ silent = true })
 -- empty setup using defaults
+vim.keymap.set("n", "<esc>", ":noh<cr>", { silent = true })
 --require("nvim-tree").setup()
-
 -- OR setup with some options
 require("nvim-tree").setup({
   sort = {
